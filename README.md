@@ -133,6 +133,7 @@ Dados cinco enteros positivos, encuentre los valores mínimo y máximo que se pu
 
 Por ejemplo arr = [1,3,5,7,9]. Nuestra suma mínima es 1+3+5+7=16 y nuestra suma máxima es 3+5+7+9=24
 
+### Código Fuente:
 
 ``` c#
 
@@ -256,6 +257,8 @@ public class Cumple : MonoBehaviour
 
 Estas a cargo del pastel para el cumpleaños de tu sobrina y has decidido que el pastel tendrá una vela por cada año de su edad total. Cuando ella apague las velas, solo podrá apaga las más altas. Tu tarea es averiguar cuántas velas puede apagar con éxito.
 Por ejemplo, si tu sobrina está cumpliendo 4 años, y la tarta tendrá 4 velas de altura 4,4,1,3, ella sará capaz de soplar 2 velas con éxito, ya que las velas más altas son de altura 4 y aquí están 2 velas cn tal altura.
+
+### Código Fuente:
 
 ``` c#
 
