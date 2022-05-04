@@ -9,6 +9,8 @@ Jhon trabaja en una tienda de ropa. Tiene una gran pila de calcetines que debe c
 
 Por ejemplo, hay n=7 calcetines con colores ar=[1,2,1,2,1,3,2]. Hay un par de colores 1 y uno de color 2. Quedan 3 calcetines extraños, uno de cada color. El número de pares es 2.
 
+### Código Fuenta:
+
 ```C#
 
 using System.Collections;
@@ -25,6 +27,7 @@ public class Calcetines : MonoBehaviour
     public TMP_InputField entry;
     public TMP_Text exit;
     public GameObject globe;
+    /*****      ENTRADA :woman_technologist:     *****/
     //En el método Strat se insertan los valores presentes en el problema, los cuales pueden ser modificados or el usuario
     void Start()
     {
@@ -34,6 +37,7 @@ public class Calcetines : MonoBehaviour
     //El método run se llama al presionar el botón "CALCULAR" 
     public void run()
     {
+        /*****      PROCESO     *****/
         //Esta cadena corresponde a la ingresada por el usuario en la interfaz
         string strOne = entry.text;
         //Aquí se asignan Regex a diferentes variables para que el programa pueda determinar cuando el usuario ingresa valores diferentes a números y a comas.
@@ -87,12 +91,13 @@ public class Calcetines : MonoBehaviour
                         exit.text = "El número de pares es " + finish;
                         if (finish < 1)
                         {
+                            /*****      ENTRADA     *****/
                             exit.text = "No hay calcetines pares :(";
                         }
                     }
                 }
             }
-            //En esta función se verifica si el dato ya existe, si no existe, retorna true para dar permiso a la ejecución del condicional de la linea 60
+            //En esta función se verifica si el dato ya existe, si no existe, retorna true para dar permiso a la ejecución del condicional de la linea 62
             bool numero(int num)
             {
                 for (int i = 0; i < arrayTwo.Length; i++)
@@ -134,78 +139,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
-using System.Linq;
-using UnityEngine.SceneManagement;
-
-public class Enteros : MonoBehaviour
-{
-    public TMP_InputField input_0, input_1, input_2, input_3, input_4;
-    public TMP_Text exit;
-    // Start is called before the first frame update
-    void Start()
-    {
-        input_0.text = "1";   
-        input_1.text = "2";   
-        input_2.text = "3";   
-        input_3.text = "4";   
-        input_4.text = "5";
-    }
-
-    // Este método es llamado al presionar el botón "CALCULAR"
-    public void Run()
-    {
-        //Se convierten los strings ingresados por el usuario a int
-        int arr_0 = Int32.Parse(input_0.text);
-        int arr_1 = Int32.Parse(input_1.text);
-        int arr_2 = Int32.Parse(input_2.text);
-        int arr_3 = Int32.Parse(input_3.text);
-        int arr_4 = Int32.Parse(input_4.text);
-
-        //Se crea un arreglo al cual se le asignan los datos ingresados por el usuario
-        int[] arr = new int[5];
-        arr[0] = arr_0;
-        arr[1] = arr_1;
-        arr[2] = arr_2;
-        arr[3] = arr_3;
-        arr[4] = arr_4;
-
-        //Se ordena el Array de manera descendente
-        int[] arrOrder = arr.OrderByDescending(c => c).ToArray();
-        //Se suman las posiciones cuatro primeras y cuatro últimas posiciones respectivamente
-        int sumDes = arrOrder[0] + arrOrder[1] + arrOrder[2] + arrOrder[3];
-        int sumAsc = arrOrder[1] + arrOrder[2] + arrOrder[3] + arrOrder[4];
-        //Se imperime el resultado
-        exit.text = sumAsc + "  " + sumDes;
-    }
-
-    //Estos métodos permiten el cambio de vistas
-    public void Prev()
-    {
-        SceneManager.LoadScene("Calcetines");
-    }
-    public void Next()
-    {
-        SceneManager.LoadScene("Cumple");
-    }
-}
-
-
-```
-
-
-## Problema 3: Cumpleaños
-
-Estas a cargo del pastel para el cumpleaños de tu sobrina y has decidido que el pastel tendrá una vela por cada año de su edad total. Cuando ella apague las velas, solo podrá apaga las más altas. Tu tarea es averiguar cuántas velas puede apagar con éxito.
-Por ejemplo, si tu sobrina está cumpliendo 4 años, y la tarta tendrá 4 velas de altura 4,4,1,3, ella sará capaz de soplar 2 velas con éxito, ya que las velas más altas son de altura 4 y aquí están 2 velas cn tal altura.
-
-``` c#
-
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
@@ -217,7 +150,7 @@ public class Cumple : MonoBehaviour
     public GameObject obj_4, obj_5, obj_6, obj_7;
     public TMP_Text exit;
 
-    //se asignan los valores por defecto del ejercicio
+    /*****      ENTRADA     *****/
     void Start()
     {
         age.value = 1;
@@ -278,6 +211,9 @@ public class Cumple : MonoBehaviour
     // Este método se asigna al botón "CALCULAR"
     public void Operate()
     {
+
+        /*****      PROCESO     *****/
+
         //Se asignan los valores a un Array String
         string[] arr =  { candle_1.text, candle_2.text, candle_3.text, candle_4.text, candle_5.text, candle_6.text, candle_7.text, };
         
@@ -298,7 +234,8 @@ public class Cumple : MonoBehaviour
                 count++;
             }
         }
-        //Se imprime el resultado
+
+        /*****      SALIDA    *****/
         exit.text = "Tu sobrina podrá soplar: " + count + " velas";
     }
 
@@ -308,6 +245,84 @@ public class Cumple : MonoBehaviour
         SceneManager.LoadScene("Enteros");
     }
 }
+
+
+
+```
+
+
+## Problema 3: Cumpleaños
+
+Estas a cargo del pastel para el cumpleaños de tu sobrina y has decidido que el pastel tendrá una vela por cada año de su edad total. Cuando ella apague las velas, solo podrá apaga las más altas. Tu tarea es averiguar cuántas velas puede apagar con éxito.
+Por ejemplo, si tu sobrina está cumpliendo 4 años, y la tarta tendrá 4 velas de altura 4,4,1,3, ella sará capaz de soplar 2 velas con éxito, ya que las velas más altas son de altura 4 y aquí están 2 velas cn tal altura.
+
+``` c#
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using System;
+using System.Linq;
+using UnityEngine.SceneManagement;
+
+public class Enteros : MonoBehaviour
+{
+    public TMP_InputField input_0, input_1, input_2, input_3, input_4;
+    public TMP_Text exit;
+
+    /*****      ENTRADA     *****/
+    void Start()
+    {
+        input_0.text = "1";   
+        input_1.text = "2";   
+        input_2.text = "3";   
+        input_3.text = "4";   
+        input_4.text = "5";
+    }
+
+    // Este método es llamado al presionar el botón "CALCULAR"
+    public void Run()
+    {
+        /*****      PROCESO     *****/
+
+        //Se convierten los strings ingresados por el usuario a int
+        int arr_0 = Int32.Parse(input_0.text);
+        int arr_1 = Int32.Parse(input_1.text);
+        int arr_2 = Int32.Parse(input_2.text);
+        int arr_3 = Int32.Parse(input_3.text);
+        int arr_4 = Int32.Parse(input_4.text);
+
+        //Se crea un arreglo al cual se le asignan los datos ingresados por el usuario
+        int[] arr = new int[5];
+        arr[0] = arr_0;
+        arr[1] = arr_1;
+        arr[2] = arr_2;
+        arr[3] = arr_3;
+        arr[4] = arr_4;
+
+        //Se ordena el Array de manera descendente
+        int[] arrOrder = arr.OrderByDescending(c => c).ToArray();
+        //Se suman las posiciones cuatro primeras y cuatro últimas posiciones respectivamente
+        int sumDes = arrOrder[0] + arrOrder[1] + arrOrder[2] + arrOrder[3];
+        int sumAsc = arrOrder[1] + arrOrder[2] + arrOrder[3] + arrOrder[4];
+
+        /*****      SALIDA     *****/
+        exit.text = sumAsc + "  " + sumDes;
+    }
+
+    //Estos métodos permiten el cambio de vistas
+    public void Prev()
+    {
+        SceneManager.LoadScene("Calcetines");
+    }
+    public void Next()
+    {
+        SceneManager.LoadScene("Cumple");
+    }
+}
+
 
 
 
