@@ -28,7 +28,7 @@ public class Calcetines : MonoBehaviour
     public TMP_Text exit;
     public GameObject globe;
     
-    /*****      ENTRADA     *****/
+    /*****      👉🏻 ENTRADA 👈🏻      *****/
     //En el método Strat se insertan los valores presentes en el problema, los cuales pueden ser modificados or el usuario
     void Start()
     {
@@ -38,7 +38,7 @@ public class Calcetines : MonoBehaviour
     //El método run se llama al presionar el botón "CALCULAR" 
     public void run()
     {
-        /*****      PROCESO     *****/
+        /*****      👉🏻 PROCESO 👈🏻      *****/
         //Esta cadena corresponde a la ingresada por el usuario en la interfaz
         string strOne = entry.text;
         //Aquí se asignan Regex a diferentes variables para que el programa pueda determinar cuando el usuario ingresa valores diferentes a números y a comas.
@@ -92,7 +92,7 @@ public class Calcetines : MonoBehaviour
                         exit.text = "El número de pares es " + finish;
                         if (finish < 1)
                         {
-                            /*****      SALIDA     *****/
+                            /*****      👉🏻 SALIDA 👈🏻      *****/
                             exit.text = "No hay calcetines pares :(";
                         }
                     }
@@ -152,7 +152,7 @@ public class Cumple : MonoBehaviour
     public GameObject obj_4, obj_5, obj_6, obj_7;
     public TMP_Text exit;
 
-    /*****      ENTRADA     *****/
+    /*****      👉🏻 ENTRADA 👈🏻      *****/
     void Start()
     {
         age.value = 1;
@@ -214,7 +214,7 @@ public class Cumple : MonoBehaviour
     public void Operate()
     {
 
-        /*****      PROCESO     *****/
+        /*****      👉🏻 PROCESO 👈🏻      *****/
 
         //Se asignan los valores a un Array String
         string[] arr =  { candle_1.text, candle_2.text, candle_3.text, candle_4.text, candle_5.text, candle_6.text, candle_7.text, };
@@ -237,7 +237,7 @@ public class Cumple : MonoBehaviour
             }
         }
 
-        /*****      SALIDA    *****/
+        /*****      👉🏻SALIDA 👈🏻      *****/
         exit.text = "Tu sobrina podrá soplar: " + count + " velas";
     }
 
@@ -276,7 +276,7 @@ public class Enteros : MonoBehaviour
     public TMP_InputField input_0, input_1, input_2, input_3, input_4;
     public TMP_Text exit;
 
-    /*****      ENTRADA     *****/
+    /*****      👉🏻 ENTRADA 👈🏻      *****/
     void Start()
     {
         input_0.text = "1";   
@@ -289,7 +289,7 @@ public class Enteros : MonoBehaviour
     // Este método es llamado al presionar el botón "CALCULAR"
     public void Run()
     {
-        /*****      PROCESO     *****/
+        /*****      👉🏻 PROCESO 👈🏻      *****/
 
         //Se convierten los strings ingresados por el usuario a int
         int arr_0 = Int32.Parse(input_0.text);
@@ -312,7 +312,7 @@ public class Enteros : MonoBehaviour
         int sumDes = arrOrder[0] + arrOrder[1] + arrOrder[2] + arrOrder[3];
         int sumAsc = arrOrder[1] + arrOrder[2] + arrOrder[3] + arrOrder[4];
 
-        /*****      SALIDA     *****/
+        /*****      👉🏻 SALIDA 👈🏻      *****/
         exit.text = sumAsc + "  " + sumDes;
     }
 
