@@ -1,15 +1,15 @@
-# Prueba Técnica 1
+# Prueba Técnica 1 :woman_technologist:
 Aquí se encuantra la solución a los tres problemas de la parte 1 de la prueba técnica.
 
 El desarrollo de estos problemas se realizó en Unity con el lenguaje C#, en este documento se encuentra el código de cada uno de estos ejercicios
 
-## Problema 1: Calcetines
+## Problema 1: Calcetines :socks:
 
 Jhon trabaja en una tienda de ropa. Tiene una gran pila de calcetines que debe combinar por color para la venta. Dada una matriz de enteros que representan el color de cada calcetin, determina cuántos pares de calcetines con colores coincidentes hay.
 
 Por ejemplo, hay n=7 calcetines con colores ar=[1,2,1,2,1,3,2]. Hay un par de colores 1 y uno de color 2. Quedan 3 calcetines extraños, uno de cada color. El número de pares es 2.
 
-### Código Fuenta:
+### Código Fuente:
 
 ```C#
 
@@ -27,7 +27,8 @@ public class Calcetines : MonoBehaviour
     public TMP_InputField entry;
     public TMP_Text exit;
     public GameObject globe;
-    /*****      ENTRADA :woman_technologist:     *****/
+    
+    /*****      ENTRADA     *****/
     //En el método Strat se insertan los valores presentes en el problema, los cuales pueden ser modificados or el usuario
     void Start()
     {
@@ -91,7 +92,7 @@ public class Calcetines : MonoBehaviour
                         exit.text = "El número de pares es " + finish;
                         if (finish < 1)
                         {
-                            /*****      ENTRADA     *****/
+                            /*****      SALIDA     *****/
                             exit.text = "No hay calcetines pares :(";
                         }
                     }
@@ -126,7 +127,7 @@ public class Calcetines : MonoBehaviour
 
 ```
 
-## Problema 2: Números Enteros
+## Problema 2: Números Enteros :1234:
 
 Dados cinco enteros positivos, encuentre los valores mínimo y máximo que se pueden calcular sumando exactamente cuatrode los cinco enteros. Luego imprima los valores mínimos y máximos respectivos como una sola línea de dos enteros largos separados por espacios.
 
@@ -251,7 +252,7 @@ public class Cumple : MonoBehaviour
 ```
 
 
-## Problema 3: Cumpleaños
+## Problema 3: Cumpleaños :birthday:
 
 Estas a cargo del pastel para el cumpleaños de tu sobrina y has decidido que el pastel tendrá una vela por cada año de su edad total. Cuando ella apague las velas, solo podrá apaga las más altas. Tu tarea es averiguar cuántas velas puede apagar con éxito.
 Por ejemplo, si tu sobrina está cumpliendo 4 años, y la tarta tendrá 4 velas de altura 4,4,1,3, ella sará capaz de soplar 2 velas con éxito, ya que las velas más altas son de altura 4 y aquí están 2 velas cn tal altura.
