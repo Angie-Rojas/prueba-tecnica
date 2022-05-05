@@ -89,6 +89,7 @@ public class Calcetines : MonoBehaviour
                         result = count / 2;
                         //Se suma la cantidad de pares
                         finish = finish + result;
+                        /*****      👉🏻SALIDA 👈🏻      *****/
                         exit.text = "El número de pares es " + finish;
                         if (finish < 1)
                         {
