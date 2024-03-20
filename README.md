@@ -3,7 +3,7 @@ Aquí se encuantra la solución a los tres problemas de la parte 1 de la prueba 
 
 El desarrollo de estos problemas se realizó en Unity con el lenguaje C#, en este documento se encuentra el código de cada uno de estos ejercicios.
 
-Ejecutable: https://ngie98.github.io/prueba-tecnica/
+Ejecutable: https://angie-rojas.github.io/prueba-tecnica/
 
 ## Problema 1: Calcetines :socks:
 
